@@ -1,33 +1,21 @@
 #include "main.h"
 
 /**
- * _strchr - string character
-<<<<<<< HEAD
- * @s: string given
- * @c: another character
- * Return: a strng
-=======
- * @c: another character
- * @s: a string
- * Return: a string
->>>>>>> 9ad0a5ea187bde42fbfc58c87af083fabfb962df
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
  */
 
 char *_strchr(char *s, char c)
 {
-	int a = 0, b;
+	int i = 0;
 
-	while (s[a])
-		a++;
-	for (b = 0; b < a; b++)
+
+	for (; s[i] >= '\0'; i++)
 	{
-		if (c == s[b])
-			s += b;
-<<<<<<< HEAD
-			return (s);
-=======
-		return (s);
->>>>>>> 9ad0a5ea187bde42fbfc58c87af083fabfb962df
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	return ('\0');
+	return (0);
 }
